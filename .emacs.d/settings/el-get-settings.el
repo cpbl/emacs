@@ -19,14 +19,10 @@
                color-theme-solarized
                ein
                magit
-               markdown-mode
-               matlab-mode
                nxhtml
                pydoc-info
-               scss-mode
                popup
                jedi
-               nyan-mode
                helm
                helm-descbinds
                js2-mode
