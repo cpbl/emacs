@@ -68,8 +68,9 @@
 ;; Matlab mode
 (require 'matlab-settings)
 
+;; CPBL removed install of this 
 ;; Nyancat mode!
-(nyan-mode 1)
+;;(nyan-mode 1)
 
 
 ;---------------------------------------------------------------------
