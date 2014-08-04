@@ -54,7 +54,7 @@
 (require 'mumamo-settings)
 
 ;; Markdown mode
-(require 'markdown-settings)
+;;(require 'markdown-settings)
 
 ;; Python mode 
 (require 'python-settings)
@@ -63,10 +63,10 @@
 (require 'latex-settings)
 
 ;; SCSS Mode
-(require 'scss-settings)
+;;(require 'scss-settings)
 
 ;; Matlab mode
-(require 'matlab-settings)
+;;(require 'matlab-settings)
 
 ;; Javascript
 (require 'js-settings)
@@ -82,3 +82,5 @@
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
+
+
