@@ -38,4 +38,16 @@
 (defun include-elget-plugin (plugin)
   (add-to-list 'load-path (make-elget-path plugin)))
 
+
+
+;; Compatibility with pre-23.3 , ie for Apollo server (RHEL6), etc: the "string-prefix-p" is missing
+(defun request-testing-string-prefix-p (prefix str &optional ignore-case)
+  (let ((case-fold-search ignore-case))
+    (string-match-p (format "^%s" (regexp-quote prefix)) str)))
+
+(unless (fboundp 'string-prefix-p)      ; not defined in Emacs 23.1
+  (fset 'string-prefix-p (symbol-function 'request-testing-string-prefix-p)))
+
+
+
 (provide 'custom-functions)
