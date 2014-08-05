@@ -14,7 +14,7 @@
  python-shell-interpreter-args (if (system-is-mac)
 				   "--gui=osx --matplotlib=osx --colors=Linux"
                                    (if (system-is-linux)
-				       "--gui=wx --matplotlib=wx --colors=Linux"))
+				       "--gui=wx --matplotlib=wx --colors=Linux --pdb"))
  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
  python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
  python-shell-completion-setup-code
@@ -74,19 +74,19 @@
 
 ;; pyflakes flymake integration
 ;; http://stackoverflow.com/a/1257306/347942
-(when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-      (list "pycheckers" (list local-file))))
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pyflakes-init)))
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
+;;(when (load "flymake" t)
+;;  (defun flymake-pyflakes-init ()
+;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;;                       'flymake-create-temp-inplace))
+;;           (local-file (file-relative-name
+;;                        temp-file
+;;                        (file-name-directory buffer-file-name))))
+;;      (list "pycheckers" (list local-file))))
+;;  (add-to-list 'flymake-allowed-file-name-masks
+;;               '("\\.py\\'" flymake-pyflakes-init)))
+;;(add-hook 'python-mode-hook
+;;	  (lambda ()
+;;	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
 
 ; Set PYTHONPATH, because we don't load .bashrc
 (defun set-python-path-from-shell-PYTHONPATH ()
