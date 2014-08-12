@@ -5,8 +5,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-return-follows-link t)
-; Wrap long lines nicely, when displaying:
- '(org-startup-truncated nil))
+; Wrap long lines nicely, when displaying:  [But this doesn't seem to be working?  Also, is this deprecated? the M-x visual-line-mode is newer/better?]
+ '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow))))
+ (setq line-move-visual nil)
+;; Test this later: '(org-startup-truncated nil))
 
 ; color theme
 (add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
