@@ -26,7 +26,7 @@
       (setq TeX-view-program-selection 
 	     (quote (((output-dvi style-pstricks) "dvips and gv") 
 		     (output-dvi "xdvi") 
-		     (output-pdf "evince")
+		     (output-pdf "Evince")
 		     (output-html "xdg-open"))))))
 
 ; always start the server for inverse search
