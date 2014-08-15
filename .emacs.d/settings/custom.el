@@ -6,8 +6,11 @@
  ;; If there is more than one, they won't work right.
  '(org-return-follows-link t)
 ; Wrap long lines nicely, when displaying:  [But this doesn't seem to be working?  Also, is this deprecated? the M-x visual-line-mode is newer/better?]
+  (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+; And add bitmap to show newlines
  '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow))))
- (setq line-move-visual nil)
+;; I think the following is deprecated /old
+;; (setq line-move-visual nil)
 ;; Test this later: '(org-startup-truncated nil))
 
 ; color theme
