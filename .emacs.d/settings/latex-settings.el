@@ -37,4 +37,17 @@
 	    (tex-pdf-mode 1)
             (TeX-source-correlate-mode 1)))
 
+; Add reftex 
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+  (setq reftex-plug-into-AUCTeX t)
+
+; Add some other hooks (added 2014cpbl:  these may conflict with more general settings??)
+    (add-hook 'LaTeX-mode-hook 'visual-line-mode)
+    (add-hook 'LaTeX-mode-hook 'flyspell-mode)
+    (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (provide 'latex-settings)
+
+; How to process bibliography?  Instead of pdflatex (default), use latexmk
+; But I need the right set of headers to get this to work with biber, etc
+(setq org-latex-to-pdf-process (list "latexmk -pv -pdf %f"))
+
