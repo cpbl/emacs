@@ -49,5 +49,11 @@
 
 ; How to process bibliography?  Instead of pdflatex (default), use latexmk
 ; But I need the right set of headers to get this to work with biber, etc
+; Still -- it's not working. Seems still to use pdflatex! Following has no effect:
 (setq org-latex-to-pdf-process (list "latexmk -pv -pdf %f"))
+
+
+
+
+
 
