@@ -7,6 +7,8 @@
  '(org-return-follows-link t)
 ; Wrap long lines nicely, when displaying:  [But this doesn't seem to be working?  Also, is this deprecated? the M-x visual-line-mode is newer/better?]
   (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+; But this does:
+ '(turn-on-visual-line-mode text-mode-hook-identify)
 ; And add bitmap to show newlines
  '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow))))
 ;; I think the following is deprecated /old
@@ -50,4 +52,7 @@
  '(markdown-math-face ((t (:inherit font-lock-string-face :foreground "#cb4b16" :slant italic))))
  '(mode-line ((t (:background "#0a2832" :foreground "#eee8d4" :inverse-video t :box nil :underline nil :slant normal :weight normal))))
  '(mumamo-background-chunk-major ((t (:background "#002b36"))))
+;; Scale up top heading fonts in org-mode:
+ '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
+ '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
  '(py-variable-name-face ((t (:inherit default :foreground "#268bd2")))))
