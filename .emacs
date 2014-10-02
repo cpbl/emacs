@@ -32,6 +32,9 @@
 (include-plugin "request")
 (require 'request)
 
+;; yasnippet
+(require 'yasnippet-settings)
+
 ;; Auto complete
 (require 'auto-complete-settings)
 
