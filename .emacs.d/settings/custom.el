@@ -56,3 +56,6 @@
  '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
  '(py-variable-name-face ((t (:inherit default :foreground "#268bd2")))))
+
+;; Kludge: this should be in org-settings.el, but bringing that in to .emacs is failing! (cpbl sep2014)
+;;(setq org-export-with-smart-quotes t)

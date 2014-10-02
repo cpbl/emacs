@@ -75,6 +75,8 @@
 ;; Nyancat mode!
 ;;(nyan-mode 1)
 
+;; org-mode . CPBL: why does following fail!?
+;(require 'org-settings)
 
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like
