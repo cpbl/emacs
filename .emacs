@@ -75,6 +75,10 @@
 (require 'js-settings)
 
 ;; CPBL removed install of this 
+;; YAML mode
+;; (require 'yaml-settings)
+
+
 ;; Nyancat mode!
 ;;(nyan-mode 1)
 

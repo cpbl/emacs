@@ -27,6 +27,7 @@
                helm-descbinds
                js2-mode
                yasnippet
+               yaml-mode
                ))   
 
 ; first enable shallow clone, so we don't need to clone the entire
