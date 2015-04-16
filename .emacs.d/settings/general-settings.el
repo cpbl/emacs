@@ -109,9 +109,20 @@
 ; size to reflect it
 (size-indication-mode 1)
 
-; disable backup
-(setq backup-inhibited t)
-; disable auto save
-(setq auto-save-default nil)
+;; CPBL noticed 2015 the following... Why would she disable backups?!  or autosave?
+;;; disable backup
+;;(setq backup-inhibited t)
+;;; disable auto save
+;;(setq auto-save-default nil)
+
+; Instead, turn them on. The following three commands come from http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files
+(setq backup-directory-alist `(("." . "~/Private/emacs-saves")))
+
+(setq backup-by-copying t)
+
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
 
 (provide 'general-settings)
