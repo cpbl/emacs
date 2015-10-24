@@ -125,4 +125,7 @@
   kept-old-versions 2
   version-control t)
 
+; CPBL 2015Oct: Make window name show at least one buffer name
+(setq frame-title-format "Emacs: %b")
+
 (provide 'general-settings)
