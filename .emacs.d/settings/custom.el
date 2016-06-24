@@ -16,9 +16,9 @@
 ;; Test this later: '(org-startup-truncated nil))
 
 ; color theme
-(add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
-(load-theme 'solarized-dark 1)
-(setq solarized-termcolors 256)
+;(add-to-list 'custom-theme-load-path (make-plugin-path "color-theme-solarized"))
+;(load-theme 'solarized-dark 1)
+;(setq solarized-termcolors 256)
 
 (require 'faces)
 (if (system-is-mac)
